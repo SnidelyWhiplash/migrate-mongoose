@@ -177,7 +177,7 @@ export default class Migrator {
       const migrationFilePath = path.join(self.migrationPath, migration.filename);
       if (this.es6) {
         require('babel-register')({
-          "presets": [require("babel-preset-latest")],
+          "presets": [require("babel-preset-env")],
           "plugins": [require("babel-plugin-transform-runtime")]
         });
 
